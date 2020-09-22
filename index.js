@@ -42,7 +42,7 @@ $("#reset").click(()=>{
   firebase.auth().sendPasswordResetEmail($("#email").val());
 });
 $("#reset").click(()=>{
-  $("email").val("");
-  $("password").val("");
-  $("password2").val("");
+  $("#email").val("");
+  $("#password").val("");
+  $("#password2").val("");
 });
