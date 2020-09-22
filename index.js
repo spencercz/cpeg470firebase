@@ -42,7 +42,7 @@ $(document).ready(function(){
     $("#reset").click(()=>{
       let email = $("#email").val();
       firebase.auth().sendPasswordResetEmail(email);
-      alert("An email has been sent to " + email + " to reset your password.");
+      alert('An email has been sent to ' + email + ' to reset your password.');
     });
     $("#clear").click(()=>{
       $("#email").val("");
