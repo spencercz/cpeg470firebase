@@ -40,6 +40,7 @@ $("#register").click(()=>{
 });
 $("#reset").click(()=>{
   firebase.auth().sendPasswordResetEmail($("#email").val());
+  alert(`A password reset email has been sent to ${user.email}`);
 });
 $("#clear").click(()=>{
   $("#email").val("");
