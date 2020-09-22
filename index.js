@@ -41,8 +41,9 @@ $(document).ready(function(){
       }
     });
     $("#reset").click(()=>{
-      firebase.auth().sendPasswordResetEmail($("#email").val());
-      alert(`A password reset email has been sent to ${user.email}`);
+      let email = $("#email").val();
+      firebase.auth().sendPasswordResetEmail(email);
+      alert("An email has been sent to " + email + " to reset your password.");
     });
     $("#clear").click(()=>{
       $("#email").val("");
