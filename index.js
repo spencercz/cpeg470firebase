@@ -41,13 +41,8 @@ $(document).ready(function(){
     });
     $("#reset").click(()=>{
       let email = $("#email").val();
-      if(!email){
-          alert("You need to sign in before resetting your password!");
-      }
-      else{
-        firebase.auth().sendPasswordResetEmail(email);
-        alert('An email has been sent to ' + email + ' to reset your password.');
-      }
+      firebase.auth().sendPasswordResetEmail(email);
+      alert('An email has been sent to ' + email + ' to reset your password.');
     });
     $("#clear").click(()=>{
       $("#email").val("");
