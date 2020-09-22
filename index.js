@@ -41,7 +41,7 @@ $("#register").click(()=>{
 $("#reset").click(()=>{
   firebase.auth().sendPasswordResetEmail($("#email").val());
 });
-$("#reset").click(()=>{
+$("#clear").click(()=>{
   $("#email").val("");
   $("#password").val("");
   $("#password2").val("");
